@@ -1,0 +1,79 @@
+h1 {
+    color: magenta;
+    font-size: 3.125rem;
+    text-decoration: underline;
+    font-weight: 700;
+    /* padding: 5rem 2rem 1rem 5rem; */
+}
+
+img {
+    /*border-radius: 0 2rem 5rem 2rem;*/
+    border-radius: 2rem;
+    max-width: 200px;
+}
+
+/* ----nav---- */
+
+nav {
+    background-color: navy;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+
+}
+
+nav a {
+    color: white;
+}
+
+/*---- content ----*/
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/*---- main ----*/
+main {
+    grid-column: 1/4
+}
+
+aside {
+    grid-column: 4/-1;
+}
+
+/* ----article---- */
+
+main article {
+    display: flex;
+    gap: 2rem;
+}
+
+/*----aside----*/
+
+aside {
+    padding-left: 1.25rem;
+}
+
+@media only screen and (max-width: 850px) {
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        grid-column: 1/-1;
+    }
+
+    main article {
+        flex-direction: column;
+    }
+}
